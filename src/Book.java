@@ -1,37 +1,33 @@
 import java.util.ArrayList;
 
 public class Book{
-    private String name;
-    private ArrayList<String> paragraphs = new ArrayList<String>();
-    private ArrayList<String> tables = new ArrayList<String>();
-    private ArrayList<String> images = new ArrayList<String>();
+    private String title;
+    private Author author;
+    private ArrayList<Chapter> chapters = new ArrayList<Chapter>();
 
-    public Book(String name){
-        this.name = name;
+    public Book(String title){
+        this.title = title;
     }
 
-     public void createNewParagraph(String text){
-        this.paragraphs.add(text);
+    public void addAuthor(Author author) {
+        this.author = author;
     }
 
-    public void createNewTable(String text){
-        this.tables.add(text);
+    public int createChapter(String name) {
+        Chapter c = new Chapter(name);
+        chapters.add(c);
+
+        return chapters.indexOf(c);
     }
 
-    public void createNewImage(String text){
-        this.images.add(text);
-    }
-
-    @Override
-    public String toString() {
-        return "Book" +
-                "\nname='" + name + '\'' +
-                "\n paragraphs=" + paragraphs +
-                "\n tables=" + tables +
-                "\n images=" + images;
+    public Chapter getChapter(int index) {
+        return chapters.get(index);
     }
 
     public void print(){
-        System.out.println(this);
+        System.out.println("Book: " + this.title);
+        author.print();
+        for(Chapter c : chapters)
+            c.print();
     }
 }
