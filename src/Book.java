@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Book{
     private String title;
     private Author author;
+    private TableOfContents contents;
     private ArrayList<Chapter> chapters = new ArrayList<Chapter>();
 
     public Book(String title){
