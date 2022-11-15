@@ -5,6 +5,7 @@ public class Table implements Element{
         this.title = title;
     }
 
+<<<<<<< HEAD
     public void add(Element element) {}
     public void remove(Element element) {}
     public Element get(int i) {
@@ -15,3 +16,9 @@ public class Table implements Element{
     }
 
 }
+=======
+    public void print() {
+        System.out.println("Table with title: " + this.title);
+    }
+}
+>>>>>>> 0e0536d2ef14abb944908969ca946f7484be5dd2
