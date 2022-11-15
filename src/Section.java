@@ -8,7 +8,7 @@ public class Section implements Element {
     public Section(String title) {
         this.title = title;
     }
-    public void add(Element element) {
+    public void add(Element element){
         elements.add(element);
     }
 
@@ -22,7 +22,17 @@ public class Section implements Element {
 
     public void print() {
         System.out.println(this.title);
+
+        if(this instanceof Book) {
+            System.out.println("\nAuthors:");
+            for (Author a : ((Book) this).authors)
+                a.print();
+            System.out.println();
+        }
+
         for(Element e : elements)
             e.print();
+
     }
+
 }

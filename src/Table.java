@@ -13,4 +13,5 @@ public class Table implements Element{
     public void print() {
         System.out.println("Table with title: " + this.title);
     }
+
 }
