@@ -1,5 +1,25 @@
 import java.util.ArrayList;
 
+<<<<<<< HEAD
+public class Book extends Section{
+    public ArrayList<Author> authors = new ArrayList<Author>();
+    private TableOfContents contents;
+
+    public Book(String title){
+        super(title);
+    }
+
+    public void addAuthor(Author author) {
+        this.authors.add(author);
+    }
+
+    public void addContent(Element element) {
+        super.add(element);
+    }
+
+    public void print(){
+        super.print();
+=======
 public class Book{
     private String title;
     private Author author;
@@ -30,5 +50,7 @@ public class Book{
         author.print();
         for(Chapter c : chapters)
             c.print();
+>>>>>>> 0e0536d2ef14abb944908969ca946f7484be5dd2
     }
+
 }
