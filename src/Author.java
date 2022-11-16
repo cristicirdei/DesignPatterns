@@ -8,4 +8,6 @@ public class Author {
     public void print() {
         System.out.println("Author: " + this.name);
     }
+
 }
+
