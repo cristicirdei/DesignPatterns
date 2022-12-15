@@ -5,5 +5,6 @@ public interface Element {
     Element get(int i);
     void print();
 
+    void accept(Visitor visitor);
 }
 

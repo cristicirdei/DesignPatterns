@@ -28,6 +28,10 @@ public class Section implements Element {
             for (Author a : ((Book) this).authors)
                 a.print();
             System.out.println();
+            if(((Book) this).contents != null) {
+                ((Book) this).contents.print();
+            }
+            System.out.println();
         }
 
         for(Element e : elements)
@@ -35,4 +39,13 @@ public class Section implements Element {
 
     }
 
+    public void accept(Visitor visitor){
+        visitor.visitSection(this);
+        for(Element e : elements)
+            e.accept(visitor);
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }

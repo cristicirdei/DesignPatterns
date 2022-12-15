@@ -27,4 +27,8 @@ public class Paragraph implements Element{
             System.out.println("Paragraph: " + this.text);
         }
     }
+
+    public void accept(Visitor visitor){
+        visitor.visitParagraph(this);
+    }
 }

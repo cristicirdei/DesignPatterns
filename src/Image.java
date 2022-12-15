@@ -22,5 +22,8 @@ public class Image implements Element{
         System.out.println("Image with name: " + this.imageName);
     }
 
+    public void accept(Visitor visitor){
+        visitor.visitImage(this);
+    }
 }
 
