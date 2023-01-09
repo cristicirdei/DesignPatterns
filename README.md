@@ -9,3 +9,6 @@ Nota 10
 https://github.com/cristicirdei/DesignPatterns/tree/b6af79c1ed130e924bdbadac0f3fc80dbdfb4988
 - all good
 Nota 10
+
+# Nota finala 
+10
